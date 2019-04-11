@@ -384,6 +384,8 @@
       <LastGenOutput>AdventureWorks2017.cs</LastGenOutput>
       <DependentUpon>AdventureWorks2017.edmx</DependentUpon>
     </Content>
+    <Content Include="SqlDocs\Prep AdventureWorks Database for Cell Level Encryption.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
