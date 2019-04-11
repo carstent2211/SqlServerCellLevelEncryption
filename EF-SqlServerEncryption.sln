@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF-SqlServerEncryption", "EF-SqlServerEncryption\EF-SqlServerEncryption.csproj", "{941B14E2-9ED2-4FB0-BC54-C74D181665B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{E5E21F27-D1F8-42E0-B1B2-1FA14B1D05DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{941B14E2-9ED2-4FB0-BC54-C74D181665B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941B14E2-9ED2-4FB0-BC54-C74D181665B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941B14E2-9ED2-4FB0-BC54-C74D181665B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941B14E2-9ED2-4FB0-BC54-C74D181665B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5E21F27-D1F8-42E0-B1B2-1FA14B1D05DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5E21F27-D1F8-42E0-B1B2-1FA14B1D05DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5E21F27-D1F8-42E0-B1B2-1FA14B1D05DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5E21F27-D1F8-42E0-B1B2-1FA14B1D05DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7D2F528-ADBB-4F72-8C18-949931884C9E}
+	EndGlobalSection
+EndGlobal
