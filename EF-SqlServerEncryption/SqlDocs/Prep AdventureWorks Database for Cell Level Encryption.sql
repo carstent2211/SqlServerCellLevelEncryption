@@ -1,6 +1,31 @@
 USE AdventureWorks2017
 GO
-CREATE USER enc FOR LOGIN AbolrousHazem;
+-- Drop login
+IF EXISTS (SELECT name FROM master.sys.server_principals
+  WHERE name = N'enc')
+  BEGIN
+	DROP LOGIN enc;
+  END;
+GO
+-- Drop user
+IF EXISTS (SELECT name 
+                FROM [sys].[database_principals]
+                WHERE [type] = 'S' AND name = N'enc')
+BEGIN
+    DROP USER enc;
+END;
+GO
+CREATE LOGIN enc
+WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';
+GO
+CREATE USER enc FOR LOGIN enc;
+GO
+-- Drop master key
+DROP SYMMETRIC KEY CreditCardNoKey
+GO
+DROP CERTIFICATE CreditCardNoCert
+GO 
+DROP MASTER KEY 
 GO
 -- Create master key
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'SomeSillyPassword@2018'
@@ -19,8 +44,13 @@ GO
 GRANT CONTROL ON CERTIFICATE::CreditCardNoCert TO "enc"
 GO
 -- Add new column to hold encrypted value
-ALTER TABLE Sales.CreditCard
-ADD CardNumberEncrypted varbinary(8000)
+IF NOT EXISTS(SELECT 1 FROM sys.columns
+  WHERE Name = N'CardNumberEncrypted'
+  AND Object_ID = Object_ID(N'Sales.CreditCard'))
+BEGIN
+	ALTER TABLE Sales.CreditCard
+	ADD CardNumberEncrypted varbinary(8000)
+END
 GO
 -- You can encrypt the CardNumber column for all existing rows, using the below T-SQL and the symmetric key.
 -- Notice how the encrypted value is copied from the original column, CardNumber, to the newly created column, CardNumberEncrypted,
