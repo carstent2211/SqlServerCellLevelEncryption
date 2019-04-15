@@ -3,4 +3,7 @@ Want your applications to handle db field encryption and decryption on demand? T
 
 The solution contains a class library with encryption functionality, as well as a few integration tests that shows how to use the class library.
 
-You can download a copy of the AdventureWorks database from here, https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks
+**TODO:**
+1. You can download a copy of the AdventureWorks database from here, https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks.
+2. Once you have downloaded and restored the AdventureWorks2017 database, execute the *Prep AdventureWorks Database for Cell Level Encryption.sql* file, to esnure you have the correct set up.
+3. Please ensure you update the AdventureWorks2017Entities connection string in the App.config file in the *Tests* projects to point to your AdventureWorks2017 db.
